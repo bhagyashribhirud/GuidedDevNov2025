@@ -134,7 +134,33 @@
     "FB5": 2
   }
 }
-~ MetaData.Schema.D2 ["ae0e45ca-c495-4fe7-a39d-3ab7278e1617","e80190a5-03b2-4095-90f7-a193a960adee","ebf6bb93-8aa6-4a01-900d-c6ea67affe21","9928edec-4272-425a-93bb-48743fee4b04","3015559e-cbc6-406a-88af-07f7930be832","3fabd836-6a53-4d8d-9069-6df88d9dae1e","132ce6f2-f8f8-444b-b869-3a4b2acd514e","119684f4-c42e-e1ef-abbd-c82798e5106d","99f84dca-30cf-0238-0581-cd1d10dedafc","7fa17b31-f654-6364-4116-da4d1ebc13fc","71a78969-8480-3069-8b4e-549857a2cb01","9f3968e3-230f-9fed-3e7a-67d10e2189ef","e9447213-ae45-b821-82a8-68251f4b1dce","89ecfa71-2e11-3795-9ea2-718b44305f73","b240aced-32d6-9802-9eea-18272d9568f3"]
++ MetaData.Schema.D2 {
+  "UId": "f3118bd0-3715-f2f8-9e23-3d14e2807ea7",
+  "A2": "UsrCity",
+  "A3": "c7e18ac1-1c87-4cde-822c-9fd39688abeb",
+  "A4": "c7e18ac1-1c87-4cde-822c-9fd39688abeb",
+  "A5": "d4d420f4-4fc2-4389-a74c-0e1623fe6736",
+  "S2": "b295071f-7ea9-4e62-8d1a-919bf3732ff2",
+  "S4": "5ca90b6a-93e7-4448-befe-ab5166ec2cfe",
+  "E6": true,
+  "E20": true,
+  "E17": "UsrCityId",
+  "E18": "UsrCityName"
+}
++ MetaData.Schema.D2 {
+  "UId": "be88378d-1beb-afc0-4f03-3b5f4eee0f42",
+  "A2": "UsrCountry",
+  "A3": "c7e18ac1-1c87-4cde-822c-9fd39688abeb",
+  "A4": "c7e18ac1-1c87-4cde-822c-9fd39688abeb",
+  "A5": "d4d420f4-4fc2-4389-a74c-0e1623fe6736",
+  "S2": "b295071f-7ea9-4e62-8d1a-919bf3732ff2",
+  "S4": "09fce1f8-515c-4296-95cd-8cd93f79a6cf",
+  "E6": true,
+  "E20": true,
+  "E17": "UsrCountryId",
+  "E18": "UsrCountryName"
+}
+~ MetaData.Schema.D2 ["ae0e45ca-c495-4fe7-a39d-3ab7278e1617","e80190a5-03b2-4095-90f7-a193a960adee","ebf6bb93-8aa6-4a01-900d-c6ea67affe21","9928edec-4272-425a-93bb-48743fee4b04","3015559e-cbc6-406a-88af-07f7930be832","3fabd836-6a53-4d8d-9069-6df88d9dae1e","132ce6f2-f8f8-444b-b869-3a4b2acd514e","119684f4-c42e-e1ef-abbd-c82798e5106d","99f84dca-30cf-0238-0581-cd1d10dedafc","7fa17b31-f654-6364-4116-da4d1ebc13fc","71a78969-8480-3069-8b4e-549857a2cb01","9f3968e3-230f-9fed-3e7a-67d10e2189ef","e9447213-ae45-b821-82a8-68251f4b1dce","89ecfa71-2e11-3795-9ea2-718b44305f73","b240aced-32d6-9802-9eea-18272d9568f3","f3118bd0-3715-f2f8-9e23-3d14e2807ea7","be88378d-1beb-afc0-4f03-3b5f4eee0f42"]
 = MetaData.Schema.D20.A2 "UsrYachtEvents"
 = MetaData.Schema.D36.A3 "c7e18ac1-1c87-4cde-822c-9fd39688abeb"
 = MetaData.Schema.D36.BS1 false
