@@ -1,0 +1,1 @@
+alter table [dbo].[SysAdminUnit] DISABLE TRIGGER [TRSysAdminUnitRoot]

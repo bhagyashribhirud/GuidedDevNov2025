@@ -68,6 +68,18 @@ define("UsrYacht_ListPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHEM
 							"caption": "#ResourceString(PDS_CreatedOn)#",
 							"dataValueType": 7,
 							"width": 132
+						},
+						{
+							"id": "8be571f4-7018-d815-7f13-6155242ca4ce",
+							"code": "PDS_UsrRegCode",
+							"caption": "#ResourceString(PDS_UsrRegCode)#",
+							"dataValueType": 27
+						},
+						{
+							"id": "854c05f0-3489-ea2e-6eaa-64c843275507",
+							"code": "PDS_UsrTicketPrice",
+							"caption": "#ResourceString(PDS_UsrTicketPrice)#",
+							"dataValueType": 32
 						}
 					]
 				}
@@ -111,6 +123,16 @@ define("UsrYacht_ListPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHEM
 					"PDS_CreatedOn": {
 						"modelConfig": {
 							"path": "PDS.CreatedOn"
+						}
+					},
+					"PDS_UsrRegCode": {
+						"modelConfig": {
+							"path": "PDS.UsrRegCode"
+						}
+					},
+					"PDS_UsrTicketPrice": {
+						"modelConfig": {
+							"path": "PDS.UsrTicketPrice"
 						}
 					}
 				}
@@ -161,6 +183,12 @@ define("UsrYacht_ListPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHEM
 						},
 						"CreatedOn": {
 							"path": "CreatedOn"
+						},
+						"UsrRegCode": {
+							"path": "UsrRegCode"
+						},
+						"UsrTicketPrice": {
+							"path": "UsrTicketPrice"
 						}
 					}
 				}

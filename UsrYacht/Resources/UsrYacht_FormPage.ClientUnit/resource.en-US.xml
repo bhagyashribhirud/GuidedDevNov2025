@@ -8,6 +8,9 @@
 			<Item Name="LocalizableStrings.addRecord_vqkbwtl_caption.Value" Value="Add new" />
 			<Item Name="LocalizableStrings.addRecord_x09jp9j_caption.Value" Value="Add new" />
 			<Item Name="LocalizableStrings.addRecord_xj830u9_caption.Value" Value="Add new" />
+			<Item Name="LocalizableStrings.Email_caption.Value" Value="Email address" />
+			<Item Name="LocalizableStrings.Email_label.Value" Value="Manager email" />
+			<Item Name="LocalizableStrings.EmailInput_8msv73z_label.Value" Value="Email(copy)" />
 			<Item Name="LocalizableStrings.PushMeButton_caption.Value" Value="Push me!" />
 		</Items>
 	</Group>
