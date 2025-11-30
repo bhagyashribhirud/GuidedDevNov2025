@@ -368,6 +368,323 @@ define("UsrYacht_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHEM
 				"parentName": "GeneralInfoTabContainer",
 				"propertyName": "items",
 				"index": 8
+			},
+			{
+				"operation": "insert",
+				"name": "MultiSelectCategory",
+				"values": {
+					"type": "crt.MultiSelect",
+					"label": "#ResourceString(MultiSelectCategory_label)#",
+					"recordId": "$Id",
+					"recordRelationColumnName": "UsrParentYacht",
+					"selectSchemaName": "UsrYachtCategoryStorage",
+					"selectColumnName": "UsrCategory",
+					"visible": true,
+					"labelPosition": "auto",
+					"placeholder": "",
+					"tooltip": ""
+				},
+				"parentName": "GeneralInfoTab",
+				"propertyName": "items",
+				"index": 1
+			},
+			{
+				"operation": "insert",
+				"name": "ExpansionPanel_yplgh5q",
+				"values": {
+					"type": "crt.ExpansionPanel",
+					"tools": [],
+					"items": [],
+					"title": "#ResourceString(ExpansionPanel_yplgh5q_title)#",
+					"toggleType": "default",
+					"togglePosition": "before",
+					"expanded": true,
+					"labelColor": "auto",
+					"fullWidthHeader": false,
+					"titleWidth": 20,
+					"padding": {
+						"top": "small",
+						"bottom": "small",
+						"left": "none",
+						"right": "none"
+					},
+					"fitContent": true,
+					"visible": true,
+					"alignItems": "stretch"
+				},
+				"parentName": "GeneralInfoTab",
+				"propertyName": "items",
+				"index": 2
+			},
+			{
+				"operation": "insert",
+				"name": "GridContainer_183pycg",
+				"values": {
+					"type": "crt.GridContainer",
+					"rows": "minmax(max-content, 24px)",
+					"columns": [
+						"minmax(32px, 1fr)"
+					],
+					"gap": {
+						"columnGap": "large",
+						"rowGap": 0
+					},
+					"styles": {
+						"overflow-x": "hidden"
+					},
+					"items": []
+				},
+				"parentName": "ExpansionPanel_yplgh5q",
+				"propertyName": "tools",
+				"index": 0
+			},
+			{
+				"operation": "insert",
+				"name": "FlexContainer_wai6ocp",
+				"values": {
+					"type": "crt.FlexContainer",
+					"direction": "row",
+					"gap": "none",
+					"alignItems": "center",
+					"items": [],
+					"layoutConfig": {
+						"colSpan": 1,
+						"column": 1,
+						"row": 1,
+						"rowSpan": 1
+					}
+				},
+				"parentName": "GridContainer_183pycg",
+				"propertyName": "items",
+				"index": 0
+			},
+			{
+				"operation": "insert",
+				"name": "GridDetailAddBtn_ohsbbxb",
+				"values": {
+					"type": "crt.Button",
+					"caption": "#ResourceString(GridDetailAddBtn_ohsbbxb_caption)#",
+					"icon": "add-button-icon",
+					"iconPosition": "only-icon",
+					"color": "default",
+					"size": "medium",
+					"clicked": {
+						"request": "crt.CreateRecordRequest",
+						"params": {
+							"entityName": "UsrYachtRental",
+							"defaultValues": [
+								{
+									"attributeName": "UsrParentYacht",
+									"value": "$Id"
+								}
+							]
+						}
+					},
+					"visible": true,
+					"clickMode": "default"
+				},
+				"parentName": "FlexContainer_wai6ocp",
+				"propertyName": "items",
+				"index": 0
+			},
+			{
+				"operation": "insert",
+				"name": "GridDetailRefreshBtn_0h6qc4t",
+				"values": {
+					"type": "crt.Button",
+					"caption": "#ResourceString(GridDetailRefreshBtn_0h6qc4t_caption)#",
+					"icon": "reload-icon",
+					"iconPosition": "only-icon",
+					"color": "default",
+					"size": "medium",
+					"clicked": {
+						"request": "crt.LoadDataRequest",
+						"params": {
+							"config": {
+								"loadType": "reload"
+							},
+							"dataSourceName": "GridDetail_jahb0ycDS"
+						}
+					}
+				},
+				"parentName": "FlexContainer_wai6ocp",
+				"propertyName": "items",
+				"index": 1
+			},
+			{
+				"operation": "insert",
+				"name": "GridDetailSettingsBtn_7yextad",
+				"values": {
+					"type": "crt.Button",
+					"caption": "#ResourceString(GridDetailSettingsBtn_7yextad_caption)#",
+					"icon": "actions-button-icon",
+					"iconPosition": "only-icon",
+					"color": "default",
+					"size": "medium",
+					"clickMode": "menu",
+					"menuItems": []
+				},
+				"parentName": "FlexContainer_wai6ocp",
+				"propertyName": "items",
+				"index": 2
+			},
+			{
+				"operation": "insert",
+				"name": "GridDetailExportDataBtn_0c9ez9r",
+				"values": {
+					"type": "crt.MenuItem",
+					"caption": "#ResourceString(GridDetailExportDataBtn_0c9ez9r_caption)#",
+					"icon": "export-button-icon",
+					"color": "default",
+					"size": "medium",
+					"clicked": {
+						"request": "crt.ExportDataGridToExcelRequest",
+						"params": {
+							"viewName": "GridDetail_jahb0yc"
+						}
+					}
+				},
+				"parentName": "GridDetailSettingsBtn_7yextad",
+				"propertyName": "menuItems",
+				"index": 0
+			},
+			{
+				"operation": "insert",
+				"name": "GridDetailImportDataBtn_f0okuap",
+				"values": {
+					"type": "crt.MenuItem",
+					"caption": "#ResourceString(GridDetailImportDataBtn_f0okuap_caption)#",
+					"icon": "import-button-icon",
+					"color": "default",
+					"size": "medium",
+					"clicked": {
+						"request": "crt.ImportDataRequest",
+						"params": {
+							"entitySchemaName": "UsrYachtRental"
+						}
+					}
+				},
+				"parentName": "GridDetailSettingsBtn_7yextad",
+				"propertyName": "menuItems",
+				"index": 1
+			},
+			{
+				"operation": "insert",
+				"name": "GridDetailSearchFilter_fibl51j",
+				"values": {
+					"type": "crt.SearchFilter",
+					"placeholder": "#ResourceString(GridDetailSearchFilter_fibl51j_placeholder)#",
+					"iconOnly": true,
+					"_filterOptions": {
+						"expose": [
+							{
+								"attribute": "GridDetailSearchFilter_fibl51j_GridDetail_jahb0yc",
+								"converters": [
+									{
+										"converter": "crt.SearchFilterAttributeConverter",
+										"args": [
+											"GridDetail_jahb0yc"
+										]
+									}
+								]
+							}
+						],
+						"from": [
+							"GridDetailSearchFilter_fibl51j_SearchValue",
+							"GridDetailSearchFilter_fibl51j_FilteredColumnsGroups"
+						]
+					}
+				},
+				"parentName": "FlexContainer_wai6ocp",
+				"propertyName": "items",
+				"index": 3
+			},
+			{
+				"operation": "insert",
+				"name": "GridContainer_7nsdf4y",
+				"values": {
+					"type": "crt.GridContainer",
+					"rows": "minmax(max-content, 32px)",
+					"columns": [
+						"minmax(32px, 1fr)",
+						"minmax(32px, 1fr)"
+					],
+					"gap": {
+						"columnGap": "large",
+						"rowGap": 0
+					},
+					"styles": {
+						"overflow-x": "hidden"
+					},
+					"items": []
+				},
+				"parentName": "ExpansionPanel_yplgh5q",
+				"propertyName": "items",
+				"index": 0
+			},
+			{
+				"operation": "insert",
+				"name": "GridDetail_jahb0yc",
+				"values": {
+					"type": "crt.DataGrid",
+					"layoutConfig": {
+						"colSpan": 2,
+						"column": 1,
+						"row": 1,
+						"rowSpan": 6
+					},
+					"features": {
+						"rows": {
+							"selection": {
+								"enable": true,
+								"multiple": true
+							}
+						}
+					},
+					"items": "$GridDetail_jahb0yc",
+					"primaryColumnName": "GridDetail_jahb0ycDS_Id",
+					"columns": [
+						{
+							"id": "237d0dc4-92b7-db1c-b6c8-c9bbaadbf260",
+							"code": "GridDetail_jahb0ycDS_UsrStartDate",
+							"caption": "#ResourceString(GridDetail_jahb0ycDS_UsrStartDate)#",
+							"dataValueType": 8,
+							"width": 152
+						},
+						{
+							"id": "b873aa75-94fa-b5e6-40d1-4ddc7b2facc0",
+							"code": "GridDetail_jahb0ycDS_UsrEndDate",
+							"caption": "#ResourceString(GridDetail_jahb0ycDS_UsrEndDate)#",
+							"dataValueType": 8,
+							"width": 135
+						},
+						{
+							"id": "a98f101b-1d18-53b3-9b29-d79c922c1d9d",
+							"code": "GridDetail_jahb0ycDS_UsrCustomer",
+							"caption": "#ResourceString(GridDetail_jahb0ycDS_UsrCustomer)#",
+							"dataValueType": 10,
+							"width": 186
+						},
+						{
+							"id": "b17c7297-adba-0e11-f987-5690f53ab091",
+							"code": "GridDetail_jahb0ycDS_UsrParentYacht",
+							"caption": "#ResourceString(GridDetail_jahb0ycDS_UsrParentYacht)#",
+							"dataValueType": 10,
+							"width": 179
+						},
+						{
+							"id": "bbac3961-3470-d5ca-218a-17ac97791d73",
+							"code": "GridDetail_jahb0ycDS_CreatedOn",
+							"caption": "#ResourceString(GridDetail_jahb0ycDS_CreatedOn)#",
+							"dataValueType": 7,
+							"width": 162
+						}
+					],
+					"placeholder": false
+				},
+				"parentName": "GridContainer_7nsdf4y",
+				"propertyName": "items",
+				"index": 0
 			}
 		]/**SCHEMA_VIEW_CONFIG_DIFF*/,
 		viewModelConfigDiff: /**SCHEMA_VIEW_MODEL_CONFIG_DIFF*/[
@@ -385,6 +702,15 @@ define("UsrYacht_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHEM
 					"PDS_UsrPrice_e9vx2b0": {
 						"modelConfig": {
 							"path": "PDS.UsrPrice"
+						},
+						"validators": {
+							"MySuperValidator": {
+								"type": "usr.DGValidator",
+								"params": {
+									"minValue": 50,
+									"message": "#ResourceString(PriceCannotBeLess)#"
+								}
+							}
 						}
 					},
 					"PDS_UsrDriveType_922vig6": {
@@ -400,11 +726,29 @@ define("UsrYacht_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHEM
 					"PDS_UsrPassengersCount_99zuat8": {
 						"modelConfig": {
 							"path": "PDS.UsrPassengersCount"
+						},
+						"validators": {
+							"MySuperValidator": {
+								"type": "usr.DGValidator",
+								"params": {
+									"minValue": 1,
+									"message": "#ResourceString(PassengersCountCannotBeLess)#"
+								}
+							}
 						}
 					},
 					"PDS_UsrCrewCount_98u9ohm": {
 						"modelConfig": {
 							"path": "PDS.UsrCrewCount"
+						},
+						"validators": {
+							"MySuperValidator": {
+								"type": "usr.DGValidator",
+								"params": {
+									"minValue": 1,
+									"message": "#ResourceString(CrewCountCannotBeLess)#"
+								}
+							}
 						}
 					},
 					"PDS_UsrManager_xk63u6w": {
@@ -441,6 +785,60 @@ define("UsrYacht_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHEM
 						"modelConfig": {
 							"path": "PDS.UsrManagerEmail_anbonel"
 						}
+					},
+					"GridDetail_jahb0yc": {
+						"isCollection": true,
+						"modelConfig": {
+							"path": "GridDetail_jahb0ycDS",
+							"filterAttributes": [
+								{
+									"name": "GridDetailSearchFilter_fibl51j_GridDetail_jahb0yc",
+									"loadOnChange": true
+								}
+							],
+							"sortingConfig": {
+								"default": [
+									{
+										"direction": "asc",
+										"columnName": "UsrComment"
+									}
+								]
+							}
+						},
+						"viewModelConfig": {
+							"attributes": {
+								"GridDetail_jahb0ycDS_UsrStartDate": {
+									"modelConfig": {
+										"path": "GridDetail_jahb0ycDS.UsrStartDate"
+									}
+								},
+								"GridDetail_jahb0ycDS_UsrEndDate": {
+									"modelConfig": {
+										"path": "GridDetail_jahb0ycDS.UsrEndDate"
+									}
+								},
+								"GridDetail_jahb0ycDS_UsrCustomer": {
+									"modelConfig": {
+										"path": "GridDetail_jahb0ycDS.UsrCustomer"
+									}
+								},
+								"GridDetail_jahb0ycDS_UsrParentYacht": {
+									"modelConfig": {
+										"path": "GridDetail_jahb0ycDS.UsrParentYacht"
+									}
+								},
+								"GridDetail_jahb0ycDS_CreatedOn": {
+									"modelConfig": {
+										"path": "GridDetail_jahb0ycDS.CreatedOn"
+									}
+								},
+								"GridDetail_jahb0ycDS_Id": {
+									"modelConfig": {
+										"path": "GridDetail_jahb0ycDS.Id"
+									}
+								}
+							}
+						}
 					}
 				}
 			},
@@ -461,7 +859,15 @@ define("UsrYacht_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHEM
 				"operation": "merge",
 				"path": [],
 				"values": {
-					"primaryDataSourceName": "PDS"
+					"primaryDataSourceName": "PDS",
+					"dependencies": {
+						"GridDetail_jahb0ycDS": [
+							{
+								"attributePath": "UsrParentYacht",
+								"relationPath": "PDS.Id"
+							}
+						]
+					}
 				}
 			},
 			{
@@ -482,6 +888,30 @@ define("UsrYacht_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHEM
 							}
 						},
 						"scope": "page"
+					},
+					"GridDetail_jahb0ycDS": {
+						"type": "crt.EntityDataSource",
+						"scope": "viewElement",
+						"config": {
+							"entitySchemaName": "UsrYachtRental",
+							"attributes": {
+								"UsrStartDate": {
+									"path": "UsrStartDate"
+								},
+								"UsrEndDate": {
+									"path": "UsrEndDate"
+								},
+								"UsrCustomer": {
+									"path": "UsrCustomer"
+								},
+								"UsrParentYacht": {
+									"path": "UsrParentYacht"
+								},
+								"CreatedOn": {
+									"path": "CreatedOn"
+								}
+							}
+						}
 					}
 				}
 			}
@@ -512,6 +942,41 @@ define("UsrYacht_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHEM
 
 			}]/**SCHEMA_HANDLERS*/,
 		converters: /**SCHEMA_CONVERTERS*/{}/**SCHEMA_CONVERTERS*/,
-		validators: /**SCHEMA_VALIDATORS*/{}/**SCHEMA_VALIDATORS*/
+		validators: /**SCHEMA_VALIDATORS*/{
+		/* The validator type must contain a vendor prefix.
+
+			Format the validator type in PascalCase. */
+			"usr.DGValidator": {
+					validator: function (config) {
+						return function (control) {
+						let value = control.value;
+						let minValue = config.minValue;
+						let valueIsCorrect = value >= minValue;
+						var result;
+						if (valueIsCorrect) {
+								result = null;
+							} else {
+								result = {
+									"usr.DGValidator": { 
+										message: config.message
+									}
+								};
+						}
+					return result;
+					};
+				},
+				params: [
+					{
+						name: "minValue"
+					},
+
+					{
+						name: "message"
+					}
+				],
+				async: false
+			}
+			
+		}/**SCHEMA_VALIDATORS*/
 	};
 });
